@@ -10,10 +10,10 @@ class TwoLayerNet:
         I, H, O = input_size, hidden_size, output_size
 
         # 重みとバイアスの初期化
-        W1 = 0.01 * np.random.randn(I, H)
-        b1 = np.zeros(H)
-        W2 = 0.01 * np.random.randn(H, O)
-        b2 = np.zeros(O)
+        W1 = 0.01 * np.random.randn(I, H).astype(np.float32)
+        b1 = np.zeros(H).astype(np.float32)
+        W2 = 0.01 * np.random.randn(H, O).astype(np.float32)
+        b2 = np.zeros(O).astype(np.float32)
 
         # レイヤの生成
         self.layers = [
